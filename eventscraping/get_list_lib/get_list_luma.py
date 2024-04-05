@@ -24,15 +24,13 @@ def get_list_luma():
 
     city_event_href_values = [element.get_attribute('href') for element in city_event_elements]
     for city_href in city_event_href_values:
-        x = requests.post("http://127.0.0.1:8000/api/v1/web3events/new/", {"title": city_href, "summary": city_href})
-        print(x)
         list_luma.extend(get_event_list(city_href, 'city'))
+        requests.post("http://127.0.0.1:8000/api/v1/web3events/new/", {"title": list_luma[-1]['title'], "source_url": list_luma[-1]['href'], "image":  list_luma[-1]['imgurl'],"organizer": list_luma[-1]['organizer'],"address": list_luma[-1]['location']})
 
     calender_event_href_values = [element.get_attribute('href') for element in calender_event_elements]
     for calender_href in calender_event_href_values:
-        x = requests.post("http://127.0.0.1:8000/api/v1/web3events/new/", {"title": calender_href, "summary": calender_href})
-        print(x)
         list_luma.extend(get_event_list(calender_href, 'topic'))
+        requests.post("http://127.0.0.1:8000/api/v1/web3events/new/", {"title": list_luma[-1]['title'], "source_url": list_luma[-1]['href']})
 
 
     # filtered_event_list = remove_repeated_events(list_luma, "href")

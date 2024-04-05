@@ -25,10 +25,12 @@ def create_event(request):
 
     if request.method == 'POST':
         title = request.POST.get('title')
-        summary = request.POST.get('summary')
-        
-        Web3event.objects.create(title = title, image='', source_url='', event_url='', summary = summary, description='', )
-        print("fwefwefwefwefefwewf")
+        image = request.POST.get('image')
+        address = request.POST.get('address')
+        organizer = request.POST.get('organizer')
+        source_url = request.POST.get('source_url')
+        print(image)
+        Web3event.objects.create(title = title, image=image, source_url=source_url, address=address, organizer = organizer,)
         return HttpResponse("create successfully")
     else :
         return HttpResponse("create error")
