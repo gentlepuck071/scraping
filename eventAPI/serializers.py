@@ -7,4 +7,3 @@ class Web3eventSerializer(serializers.ModelSerializer):
     event_url = serializers.CharField(max_length = 100)
     summary = serializers.CharField(max_length = 300)
     description = serializers.CharField()
-    title = serializers.CharField(max_length = 100)
