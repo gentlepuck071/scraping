@@ -9,7 +9,7 @@ def get_event_list():
     event_list.extend(get_list_luma())
     # event_list.extend(get_list_eventbrite())
     # time.sleep(5)
-    # print("1112:", datetime.now())
+    # print("1112:", datetime.now())    
     
     print(event_list)
     # print(len(event_list))
