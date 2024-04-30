@@ -19,13 +19,13 @@ class Migration(migrations.Migration):
                 ('city_name', models.CharField(max_length=50)),
             ],
         ),
-        migrations.CreateModel(   
+        migrations.CreateModel(
             name='EventUrl',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('type', models.CharField(max_length=20)),
                 ('url', models.CharField(max_length=200)),
-            ],   
+            ],
         ),
         migrations.CreateModel(
             name='Web3event',
