@@ -4,7 +4,7 @@ from get_list_lib.get_list_luma import get_list_luma
 from get_list_lib.get_list_eventbrite import get_list_eventbrite
 import requests
 
-def get_event_list():
+def get_event_list():   
     event_list = []
     event_list.extend(get_list_luma())
     # event_list.extend(get_list_eventbrite())
