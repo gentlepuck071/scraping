@@ -12,7 +12,7 @@ class Migration(migrations.Migration):
     operations = [
         migrations.RemoveField(
             model_name='web3event',
-            name='description',
+            name='description',      
         ),
         migrations.RemoveField(
             model_name='web3event',
